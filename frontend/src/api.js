@@ -1,7 +1,7 @@
 const API_BASES = {
-  auth: "http://localhost:3001/api/users",
-  products: "http://localhost:3002/api/products",
-  orders: "http://localhost:3003/api/orders"
+  auth: "http://microservices.local/api/users",
+  products: "http://microservices.local/api/products",
+  orders: "http://microservices.local/api/orders"
 };
 
 async function request(url, options = {}) {
