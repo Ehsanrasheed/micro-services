@@ -1,0 +1,14 @@
+{
+  "name": "microservices-demo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:user": "npm run dev --prefix user-service",
+    "dev:product": "npm run dev --prefix product-service",
+    "dev:order": "npm run dev --prefix order-service",
+    "dev": "concurrently \"npm run dev:user\" \"npm run dev:product\" \"npm run dev:order\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
