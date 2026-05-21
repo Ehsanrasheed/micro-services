@@ -44,6 +44,27 @@ npm install
 npm run dev
 ```
 
+## Kubernetes Deployment (Local)
+
+Use the manifests under `k8s/` to deploy MongoDB, all services, and frontend.
+
+```bash
+kubectl apply -f k8s/mongodb/
+kubectl apply -f k8s/user/
+kubectl apply -f k8s/product/product-all.yaml
+kubectl apply -f k8s/order/order-all.yaml
+kubectl apply -f k8s/frontend/frontend-all.yaml
+kubectl apply -f k8s/ingress.yaml
+```
+
+To verify resources:
+
+```bash
+kubectl get pods
+kubectl get svc
+kubectl get ingress
+```
+
 ## Basic API Endpoints
 
 ### User Service
